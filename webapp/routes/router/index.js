@@ -1,1 +1,1 @@
-exports.registereduser_routes = require('./registereduser_routes')
+exports.registeredUser_routes = require('./registeredUser_routes')
