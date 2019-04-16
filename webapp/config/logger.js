@@ -5,7 +5,7 @@ const env = process.env.NODE_ENV || 'development';
 const logDir = 'log';
 
 
-const logger = console.log("Error thrown from logger")
+const logger = console.log("FROM  logger:  ")
 
 module.exports =logger;
 
