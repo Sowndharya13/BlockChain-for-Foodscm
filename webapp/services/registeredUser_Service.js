@@ -1,11 +1,15 @@
 
 var dao = require("../daos/registeredUser_Dao")
 
-var logger  = require("../config/logger")
-module.exports.create_user = function(registeredUser,callback) {
+module.exports.create_user =async function(registeredUser,callback) {
  // logger.info("req : create Items in the service",registeredUser)
-  dao.create_user(registeredUser, (User)=>{
-    
-  callback (User)
+  
+ 
+  dao.create_user(registeredUser,(error,response)=>{
+    if (error){
+      return callback(error, null)
+      }
+      console.log("Create RegisteredUser Service Callback ------->", response)
+      return callback(null, response)
   });
 }
