@@ -5,7 +5,6 @@ const env = process.env.NODE_ENV || 'development';
 const logDir = 'log';
 
 
-const logger = console.log("FROM  logger:  ")
-
+const logger= console.log("From logger: ") ;
 module.exports =logger;
 

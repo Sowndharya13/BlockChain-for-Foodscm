@@ -8,6 +8,7 @@ var sqlQuery = PropertiesReader(__dirname+'/../sql_queries/registeredUser_SQL.pr
 
 var logger = require("../config/logger")
 console.log("From dao of registered USer");
+
 module.exports.create_user = function(Registered_User,callback) {
 //logger.info("req : create Registered_User in the dao",Registered_User);
   
