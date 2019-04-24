@@ -26,10 +26,23 @@ app.use(function(req, res, next) {
 app.use('/assets', express.static(__dirname+ '/public/assets/'));
 app.use('/js', express.static(__dirname+ '/public/js'));
 
-app.get('/',function(req,res){
+app.get('/landing_page',function(req,res){
 	res.sendFile(path.join(__dirname+'/public/index.html'));
   });
 
+
+	/*  For reg page of other directory*/
+
+app.use('/vendor', express.static('/home/sowndharya/Downloads/colorlib-regform-4/colorlib-regform-4/vendor'));
+app.use('/js', express.static('/home/sowndharya/Downloads/colorlib-regform-4/colorlib-regform-4/js'));
+app.use('/css', express.static('/home/sowndharya/Downloads/colorlib-regform-4/colorlib-regform-4/css'));
+
+app.get('/register',function(req,res){
+	res.sendFile(path.join('/home/sowndharya/Downloads/colorlib-regform-4/colorlib-regform-4/index.html'));
+  });
+
+
+/////////////////////////////
   app.use("/api", router);
 models.sequelize.sync().then(function () {
 	var server = app.listen(3003, function() {
