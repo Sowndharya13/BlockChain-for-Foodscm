@@ -40,7 +40,6 @@ module.exports.validate_login = function(login_credentials,callback) {
       password: login_credentials.user_entered_password,
     };
 
-
   console.log("From dao of registered user validate Login : ", login_cred);
   models.Registered_User.findAll({
     // attributes: ['Registered_User.first_name'],
@@ -51,9 +50,9 @@ module.exports.validate_login = function(login_credentials,callback) {
   }).then(response => {
       if (response== ''){
           throw new Error("Validation failed")
-          
           }
-          console.log('Dao Success Response logged in as ', response)
+          console.log('Dao Success Response logged in as ', response[0].first_name)
+          console.log('Dao Success logged in as ', response)
           return callback(null, response)
   }).catch(error=>{
       console.log(error)

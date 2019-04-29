@@ -10,6 +10,7 @@ module.exports.create_user =async function(registeredUser,callback) {
       return callback(error, null)
       }
       console.log("Create RegisteredUser Service Callback ------->", response)
+      
       return callback(null, response)
   });
 }
@@ -24,6 +25,8 @@ module.exports.validate_login =async function(login_details,callback) {
        return callback(error, null)
        }
        console.log("Login validation Service Callback ------->", response)
+      //  console.log("Login as  ------->", response.Registered_User.first_name)
+
        return callback(null, response)
    });
  }

@@ -29,7 +29,9 @@ app.use('/js', express.static(__dirname+ '/public/js'));
 app.get('/landing_page',function(req,res){
 	res.sendFile(path.join(__dirname+'/public/index.html'));
   });
-
+	app.get('/dashboard',function(req,res){
+		res.sendFile(path.join(__dirname+'/public/dashboard.html'));
+		});
 
 	/*  For reg page of other directory*/
 

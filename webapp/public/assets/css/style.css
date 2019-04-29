@@ -1002,7 +1002,7 @@ Buttons
 ******************/
 .btn {
   color: #ffffff;
-  padding: 10px 25px;
+  padding: 0px 31px;
   cursor: pointer;
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.14);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.14);
@@ -1684,7 +1684,7 @@ Header 6
 .h6-nav-bar {
   padding: 0px; }
   .h6-nav-bar .navbar-nav .nav-link {
-    padding: 17px 17px;
+    padding: 1px 20px 1px;
     color: white; }
   .h6-nav-bar .navbar-nav .nav-item:hover .nav-link, .h6-nav-bar .navbar-nav .nav-item.active .nav-link {
     color: white; }

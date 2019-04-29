@@ -1,0 +1,147 @@
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+   
+  .sidebar a.active {
+    background-color: #4caaaf;
+    color: white;
+  }
+  
+  .sidebar a:hover:not(.active) {
+    background-color: #4caaaf;
+    color: white;
+  }
+  
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 100%;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
+
+  .sidebar-body{
+ padding-top: 20%;
+  }
+/* Style for content side */
+
+/* cards */
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.col-md-4 {
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5%;
+
+    box-sizing: border-box;
+    display: block;
+    /* width: 33.33333333333333%; */
+}
+.bg-info {
+    background-color: #b5d1d8 !important;
+    color: white !important;
+}
+.widget-bg1{
+  background-color: #efbccc!important;
+
+}
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+}
+.widget-tile {
+    position: relative;
+    overflow: hidden;
+    margin: -20px;
+    padding: 20px;
+}
+.widget-tile .progress.progress-over-tile {
+    margin: auto -20px 5px;
+    width: auto !important;
+}
+.progress.progress-xs {
+    height: 5px;
+}
+.progress.progress-white {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.progress {
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+    position: relative;
+}
+.progress-bar-white {
+    background-color: #FFF;
+}
+.progress-bar {
+    box-shadow: none;
+    position: relative;
+}
+#topnavbar{
+    position: relative;
+    display: block;
+    background-color: #f1f1f1;
+    padding-bottom: 4%;
+}
+
+
+#id01{
+  position: absolute;
+}
+.topnavbar_menu_left{
+  padding-left: 2%;
+  padding-right: 1%;
+  padding-top: 2%;
+  margin-bottom: -2%;
+  font-style: italic;
+}
+.topnavbar_profile>li{
+ 
+  float: right!important;
+  padding-right: 2%;
+  margin-top: 1%;
+}
+.topnavbar_profile>ul {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}

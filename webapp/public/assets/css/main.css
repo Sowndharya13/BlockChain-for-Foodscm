@@ -529,16 +529,8 @@ input {
   display: none !important;
 }
 
-.rs-select2 .select2-container {
-  width: 100% !important;
-  outline: none;
-  background: #fafafa;
-  -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
-  -moz-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
-  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+.rs-select2 {
+background-color : #b2b8bb4f;  
 }
 
 .rs-select2 .select2-container .select2-selection--single {

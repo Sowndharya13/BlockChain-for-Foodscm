@@ -33,3 +33,24 @@ function openForm() {
   function closeForm() {
     document.getElementById("myForm").style.display = "none";
   }
+
+
+  ////////////////////////////
+
+  $(function() {
+  
+    // contact form animations
+    $('#register_id').click(function() {
+      $('#register_popup').fadeToggle();
+    })
+    $(document).mouseup(function (e) {
+      var container = $("#contactForm");
+  
+      if (!container.is(e.target) // if the target of the click isn't the container...
+          && container.has(e.target).length === 0) // ... nor a descendant of the container
+      {
+          container.fadeOut();
+      }
+    });
+    
+  });

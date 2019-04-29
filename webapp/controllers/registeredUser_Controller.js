@@ -56,14 +56,19 @@ module.exports.validate_login = function(req, res) {
     login_credentials.status = 400
     login_credentials.error = error.message
     res.status(400)
-    return res.redirect('/register');
+    return res.redirect('/landing_page');
        }
     else{
       login_credentials.status = 201
       login_credentials.error = null
       login_credentials.data = response 
       res.status(201) 
-      return res.redirect('/landing_page');
+
+      // return res.redirect('/dashboard',function(req, res){
+      //   res.render('dashboard', { first_name: response[0].first_name });
+      //   });
+
+       return res.redirect('/dashboard');
     }
       
     //return res.json(Registered_User)

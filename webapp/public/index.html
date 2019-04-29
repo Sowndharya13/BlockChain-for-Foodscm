@@ -18,8 +18,7 @@
     <link href="assets/scss/icons/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="assets/scss/icons/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
     <link href="assets/scss/icons/themify-icons/themify-icons.css" rel="stylesheet" type="text/css">
-
-
+    <link href="css/main.css" rel="stylesheet" type="text/css">
     <!-- This page CSS -->
     <!-- Custom CSS -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -31,6 +30,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
@@ -74,14 +74,14 @@
                                         </a>
                                         <div id="id01" class="modal-login">
   
-                                            <form class="modal-content animate" action="/action_page.php">
+                                            <form class="modal-content animate"  method ="post" action="/api/registeredUser/Login">
                                                                                      
                                               <div class="container">
-                                                <label for="uname"><b>Username</b></label>
-                                                <input type="text" placeholder="Enter Username" name="uname" required>
+                                                <label ><b>Email</b></label>
+                                                <input type="text" placeholder="Enter Email" name="email" required>
                                           
-                                                <label for="psw"><b>Password</b></label>
-                                                <input type="password" placeholder="Enter Password" name="psw" required>
+                                                <label><b>Password</b></label>
+                                                <input type="password" placeholder="Enter Password" name="password" required>
                                                   
                                                 <button type="submit">Login</button>
                                                 <label>      
@@ -96,9 +96,60 @@
                                             </form>
                                           </div>                                                                  
                                                  
-                                    </li>
+                                    </li> 
+                                    <li class="nav-item dropdown mega-dropdown login">
+                                      
+                                                <div id="register_popup" class="modal-login">
+  
+                                                        <form  name="sign-up-form" class="modal-content animate"  method ="post" action="/api/registeredUser/Registered_User">
+                                                            <div class="container">
+                                                            <label><b>first name</b></label>
+                                                            <input type="text" name="first_name"   placeholder="Enter first_name" required>
+                                                  
+                                                        
+                                                            <label><b>Password</b></label>
+                                                            <input  type="password" name="password"  placeholder="Enter Password" required>
+                                                   
+                                                
+                                                        
+                                                            <label><b>Email</b></label>
+                                                            <input  type="text" name="email"  placeholder="Enter Email" required>
+                                                   
+                                                        
+                                                            <label><b>Location</b></label>
+                                                            <input  type="text" name="location" placeholder="Enter location" required>
+                                                   
+                                                 
+                                                    <label ><b>Role</b></label>
+                                                    <div class=" container " style = "background-color: #b2b8bb4f;">
+                                                        <select name="role"  style = "width: 100%; ">
+                                                            <option disabled="disabled" selected="selected" required>Choose Your Role</option>
+                                                            <option>Fisher Man</option>
+                                                            <option>Processing Industry Person</option>
+                                                            <option>WholeSaler</option>
+                                                            <option>Logistics Team</option>
+                                                        </select>
+                                                        <div class="select-dropdown"></div>
+                                                    </div>
+                                                 
+                                                <div class="p-t-15">
+                                                    <button class="btn " type="submit">Register</button>
+                                                    <button class="cancelbtn"  onclick="document.getElementById('register_popup').style.display='none'" class="cancelbtn"type="submit">Cancel</button>
+                        
+                                                </div>
+                                            </div>
+                                            </form> 
+                                                      </div>   
+                                         
+
+
+
+
+                                                         
+                                            </li>
+        
+
                                
-                                  </li> 
                             </ul>
                           
                     </nav>
@@ -126,7 +177,57 @@
                                 <h1 class="subtitle">Sea Food Traceability</h1>
                                 <h3 class ="subtitle"> using BLOCKCHAIN </h3>
                                 <h4 class="subtitle font-light"> From the point of harvest to the point of consumption  </h4> 
-                               <a href="#" class="btn btn-md m-t-30 btn-danger-gradiant font-14">Know more</a>
+                              
+                              <br><br>
+
+                                <a href="#" id="register_id" class="btn btn-danger-gradiant "  onclick="document.getElementById('register_popup').style.display='block'"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Join Us</a>
+                                
+            <!-- <div id = "register_popup" > -->
+
+            <!-- <div class="card card-4 "> -->
+                <!-- <div class="card-body "> -->
+                    <!-- <h2 class="title"> Register Now</h2>
+                    <form  name="sign-up-form"   method ="post" action="/api/registeredUser/Registered_User">
+                                
+                                    <label>first name</label>
+                                    <input type="text" name="first_name" required>
+                          
+                                
+                                    <label>Password</label>
+                                    <input  type="password" name="password" required>
+                           
+                        
+                                
+                                    <label>Email</label>
+                                    <input  type="text" name="email" required>
+                           
+                                
+                                    <label>Location</label>
+                                    <input  type="text" name="location" required>
+                           
+                         
+                            <label >Role</label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="role">
+                                    <option disabled="disabled" selected="selected" required>Choose Your Role</option>
+                                    <option>Fisher Man</option>
+                                    <option>Processing Industry Person</option>
+                                    <option>WholeSaler</option>
+                                    <option>Logistics Team</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        <div class="p-t-15">
+                            <button class="btn btn--radius-2 btn--blue" type="submit">Register</button>
+                            <button class="btn btn--radius-2"   onclick="document.getElementById('register_popup').style.display='none'" class="cancelbtn"type="submit">Cancel</button>
+
+                        </div>
+                    </form> -->
+                <!-- </div>
+            </div>  -->
+        <!-- </div> -->
+           <!-- End of sign up -->
+
                             </div>
                             <!-- Column -->
                         </div>
@@ -474,23 +575,7 @@
     <!-- ============================================================== -->    <!-- ============================================================== -->
     <!-- All Database connection javascript file -->
     <!-- ============================================================== -->
-    <script src="js/db-connection.js"></script>
-    <!-- <script >
-    $(".js-open-modal").click(function(){
-    $(".modal").addClass("visible");
-    });
-
-    $(".js-close-modal").click(function(){
-    $(".modal").removeClass("visible");
-    });
-
-    $(document).click(function(event) {
-    //if you click on anything except the modal itself or the "open modal" link, close the modal
-    if (!$(event.target).closest(".modal,.js-open-modal").length) {
-    $("body").find(".modal").removeClass("visible");
-    }
-    });
-    </script> -->
+  
  <!-- Jquery JS-->
  <!-- <script src="vendor/jquery/jquery.min.js"></script>
  Vendor JS -->
