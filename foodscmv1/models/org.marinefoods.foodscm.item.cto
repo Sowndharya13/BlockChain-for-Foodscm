@@ -5,78 +5,77 @@
 namespace org.marinefoods.foodscm.item
 
 
-asset ItemLog identified by itemId {
+asset Item identified by itemId {
 
-  o String containerId
-  o String participantKey
-  o DateTime FishingDate
-  o DateTime outDate
-  o DateTime expiryDateBeforeProcessing 
-  o String itemId
-  o String location
-  o String CurrentOwner
-  o String preservationDetail
-  o ItemDetail itemDetail
-  o ItemSource itemSource
-  o ProcessingDetail processingDetail optional
+  o String containerId //1
+  o String participantKey //2
+  o DateTime FishingDate //3
+  o DateTime outDate //4
+  o DateTime expiryDate //5
+  o String itemId //6 
+  o String location //7 
+  o String CurrentOwner //8 
+  o String preservationDetail //9 
+  o ItemDetail itemDetail //c1
+  o ItemSource itemSource //e
+  o ProcessingDetail processingDetail optional //c2
 }
 
 concept ProcessingDetail {
   o String processingAgentId
-  o String[] processingMethod 
+  o String processingMethod 
   o String ingredientsUsed
   o DateTime processingTime
-  o DateTime expiryDateAfterProcessing
-}
+  }
 concept ItemDetail{
  o String itemSpecies
- o String itemtype optional
+ o String itemtype 
  o Integer weightInKg
-
 }
+
 enum ItemSource{
   o SEA 
-  o POND
+  o LAKE
   o FARM
 }
 
 transaction CreateItemLog {
-  o String containerId
-  o String participantKey
-  o DateTime FishingDate
-  o DateTime expiryDateBeforeProcessing 
-  o String itemId
-  o String location
-  o String owner
-  o ItemDetail itemDetail
+
+  o String containerId //1
+  o DateTime FishingDate //3
+  o DateTime outDate //4
+  o DateTime expiryDate //5
+  o String location //7 
+  o String CurrentOwner //8 
+  o String preservationDetail //9 
   o ItemSource itemSource
-  o String preservationDetail
-  o ProcessingDetail processingDetail optional
+  o String itemSpecies 
+  o String itemtype 
+  o Integer weightInKg   //c1
+  
+  o String processingAgentId optional
+  o String processingMethod optional
+  o String ingredientsUsed optional
+  o DateTime processingTime optional //c2
 
 }
 transaction UpdateItemLog {
-  --> ItemLog itemId
+  o String  itemId
   o DateTime outDate
   o String location
   o String CurrentOwner
+  o String containerId
+  o DateTime expiryDate 
   o ProcessingDetail processingDetail optional
 
 }
 
 event LogCreated {
-  --> ItemLog itemId
-  o String newValue
+  o String  itemId
 }
 
 event LogUpdated {
-  --> ItemLog itemId
-  o String oldValue
-  o String newValue
+  o String  itemId
+
 }
               
-            
-                    
-                      
-                       
-                        
-                         

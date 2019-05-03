@@ -14,35 +14,23 @@ concept Contact {
   o String lname
   o String email
 }
-participant Fishers extends SeaFoodSCMParticipant {
-  o String participantId
-  o String firstName
-  o String lastName
-  o String location
+participant SeaFoodScmNetworkAdmin identified by itemId extends SeaFoodSCMParticipant{
+   o String itemId
+  /** This is a concrete resource definition */
 }
-participant PreProcessorExporter extends SeaFoodSCMParticipant {
-  o String participantId
-  o String firstName
-  o String lastName
-  o String location
+participant Fishermen identified by itemId extends SeaFoodSCMParticipant {
+  o String itemId
+}
 
+participant LogistitcsTeam identified by itemId extends SeaFoodSCMParticipant {
+ o String itemId
 }
-participant ProcessorExporter extends SeaFoodSCMParticipant {
-  o String participantId
-  o String firstName
-  o String lastName
-  o String location
-
+participant ProcessingIndustryPerson identified by itemId extends SeaFoodSCMParticipant {
+ o String itemId
 }
-participant Wholesaler extends SeaFoodSCMParticipant {
-  o String participantId
-  o String firstName
-  o String lastName
-  o String location
+participant Wholesaler identified by itemId extends SeaFoodSCMParticipant {
+ o String itemId
 }
-participant Retailer extends SeaFoodSCMParticipant{
-  o String participantId
-  o String firstName
-  o String lastName
-  o String location
+participant Retailer identified by itemId extends SeaFoodSCMParticipant{
+  o String itemId
 }
