@@ -1,0 +1,23 @@
+/*******************
+Feature 30
+*******************/
+.feature30 {
+    position: relative; 
+}
+  
+.wrap-feature30-box {
+    position: absolute;
+    top: 20%;
+    right: 0px; 
+}
+.spacer{
+ width: 100%;
+ background-color: aliceblue
+}
+.sec-comp{
+    padding-top: 0%;
+}
+.row{
+    padding: 10%;
+
+}
