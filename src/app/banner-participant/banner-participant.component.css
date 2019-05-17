@@ -1,0 +1,19 @@
+.up{
+    padding: 8%;
+
+}
+.label-success {
+    background-color: #2cdd9b;
+}
+.label-rounded {
+    border-radius: 60px;
+    width: 22%;
+    padding: 5%;
+}
+.label {
+    padding: 1%;
+    line-height: 13px;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 75%;
+}

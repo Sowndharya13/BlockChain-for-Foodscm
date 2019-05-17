@@ -12,6 +12,7 @@ import { ContactComponent } from './contact/contact.component';
 import { TopnavbarComponent } from './topnavbar/topnavbar.component';
 import { BannerExploreComponent } from './banner-explore/banner-explore.component';
 import { BannerParticipantComponent } from './banner-participant/banner-participant.component';
+import { RegisterBoxComponent } from './register-box/register-box.component';
 // import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 
@@ -23,7 +24,8 @@ import { BannerParticipantComponent } from './banner-participant/banner-particip
     ContactComponent,
     TopnavbarComponent,
     BannerExploreComponent,
-    BannerParticipantComponent  ],
+    BannerParticipantComponent,
+    RegisterBoxComponent  ],
   imports: [
     BrowserModule,
     NgbModule.forRoot(),

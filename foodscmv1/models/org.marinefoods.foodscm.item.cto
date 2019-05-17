@@ -1,0 +1,82 @@
+/**
+ * Write your model definitions here
+ */
+
+namespace org.marinefoods.foodscm.item
+
+
+asset ItemLog identified by itemId {
+
+  o String containerId
+  o String participantKey
+  o DateTime FishingDate
+  o DateTime outDate
+  o DateTime expiryDateBeforeProcessing 
+  o String itemId
+  o String location
+  o String CurrentOwner
+  o String preservationDetail
+  o ItemDetail itemDetail
+  o ItemSource itemSource
+  o ProcessingDetail processingDetail optional
+}
+
+concept ProcessingDetail {
+  o String processingAgentId
+  o String[] processingMethod 
+  o String ingredientsUsed
+  o DateTime processingTime
+  o DateTime expiryDateAfterProcessing
+}
+concept ItemDetail{
+ o String itemSpecies
+ o String itemtype optional
+ o Integer weightInKg
+
+}
+enum ItemSource{
+  o SEA 
+  o POND
+  o FARM
+}
+
+transaction CreateItemLog {
+  o String containerId
+  o String participantKey
+  o DateTime FishingDate
+  o DateTime expiryDateBeforeProcessing 
+  o String itemId
+  o String location
+  o String owner
+  o ItemDetail itemDetail
+  o ItemSource itemSource
+  o String preservationDetail
+  o ProcessingDetail processingDetail optional
+
+}
+transaction UpdateItemLog {
+  --> ItemLog itemId
+  o DateTime outDate
+  o String location
+  o String CurrentOwner
+  o ProcessingDetail processingDetail optional
+
+}
+
+event LogCreated {
+  --> ItemLog itemId
+  o String newValue
+}
+
+event LogUpdated {
+  --> ItemLog itemId
+  o String oldValue
+  o String newValue
+}
+              
+            
+                    
+                      
+                       
+                        
+                         

@@ -21,3 +21,21 @@ Feature 30
     padding: 10%;
 
 }
+.label-success {
+    background-color: #1f68ee;
+}
+.label-rounded {
+    border-radius: 60px;
+    width: 22%;
+    padding: 5%;
+}
+.label {
+    padding: 1%;
+    line-height: 13px;
+    color: #1a71e4;
+    font-weight: 400;
+    font-size: 75%;
+}
+.label-info {
+    background-color: #188ef4;
+}
